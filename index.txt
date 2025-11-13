@@ -1,1 +1,3 @@
 Contain all python code here
+
+write all code from basic to advance here
