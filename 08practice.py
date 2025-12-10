@@ -188,3 +188,87 @@ def longest_word(s):
 
 sentence = "Python programming is very powerful"
 longest_word(sentence)
+
+
+
+# swap two variable in python
+
+def swap(a,b):
+    temp=a
+    a=b
+    b=temp
+    return a,b
+a=299
+b=1000
+result=swap(a,b)
+print(result)
+
+
+
+#how to check if number is prime or not
+
+def isPrime(n):
+    div=2
+    count=0
+    while(n>=div):
+        if n%div==0:
+            count+=1
+        div+=1
+    if count==1:
+        return "is prime num"        
+    else:
+        return 'is not prime'
+
+
+n=55
+result=isPrime(n)
+print(result)
+
+
+
+# finding the factorial of number
+
+def factorial(a):
+    new_a=[]
+    
+    
+    for i in a:
+        fact=1
+        temp=i
+        while(temp>=1):
+            fact=fact*temp
+            temp-=1
+        
+        new_a.append(fact)    
+
+    print(new_a)
+
+
+arr=[1,2,3,4,5]
+
+factorial(arr)
+
+
+
+# fibonacci series
+
+def fib_series(n):
+    a=0
+    b=1
+    if n<0:
+        print(False)
+    elif n==1:
+        print(a)
+    elif n==2:
+        print(a)
+        print(b)
+    else:
+        print(a)
+        print(b)
+        while(n>2):
+            c=a+b
+            print(c) 
+            a,b=b,c
+            n-=1     
+n=10
+fib_series(n)
