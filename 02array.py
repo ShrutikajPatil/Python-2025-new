@@ -62,3 +62,52 @@ print(a1)
 #     temp.append(0)
 
 # print(temp)
+
+
+
+a1=[1,2,0,3,4,1,0,0,5,6]
+
+f={}
+for i in a1:
+    if i not in f:
+        f[i]=1
+    else:
+        f[i]+=1
+print(f)   
+
+list_f=list(f.items())
+print(list_f)
+
+for i in range(len(list_f)):
+    for j in range(i+1,len(list_f)):
+        if list_f[i][1]<list_f[j][1]:
+            list_f[i],list_f[j]=list_f[j],list_f[i]
+
+
+print(list_f)
+print(list_f[1][0])    
+
+
+
+
+
+def isflatten(arr):
+    flat=[]
+
+    for i in arr:
+        if isinstance(i,list):
+            flat.extend(isflatten(i))
+        else:
+            flat.append(i)
+
+
+    for i in range(len(flat)):
+        for j in range(i+1,len(flat)):
+            if flat[i]<flat[j]:
+                flat[i],flat[j]=flat[j],flat[i]
+
+
+    return flat            
+
+arr=[1,2,[4,3,5,10],7,8,[9],6]
+print(isflatten(arr))
